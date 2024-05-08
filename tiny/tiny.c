@@ -48,11 +48,11 @@ void doit(int fd)
   struct stat sbuf;
   char buf[MAXLINE], method[MAXLINE], uri[MAXLINE], version[MAXLINE];
   char filename[MAXLINE], cgiargs[MAXLINE];
-  rio_t request_rio;
+  rio_t rio;
 
   // Read request line and headers
-  Rio_readinitb(&request_rio, fd);
-  Rio_readlineb(&request_rio, request_buf, MAXLINE); //read and parse the request line 55-58
+  Rio_readinitb(&rio, fd);
+  Rio_readlineb(&rio, buf, MAXLINE); //read and parse the request line 55-58
   printf("Request headers:\n");
   printf("%s", buf);
   sscanf(buf, "%s %s %s", method, uri, version);
