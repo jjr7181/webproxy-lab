@@ -1,7 +1,40 @@
-<html>
+<!-- <html>
 <head><title>test</title></head>
 <body> 
 <img align="middle" src="godzilla.gif">
 Dave O'Hallaron
+</body>
+</html> -->
+
+<html></html>
+<head>
+  <title>Tiny Web-server</title>
+  <script>
+    function adder() {
+      const n1 = document.getElementById("n1").value;
+      const n2 = document.getElementById("n2").value;
+      const url =
+        "http://localhost:8000//cgi-bin/adder?" +
+        n1 +
+        "&" +
+        n2;
+      window.location.href = url;
+    }
+  </script>
+</head>
+<body>
+  <div align = "middle">
+    <img src="godzilla.gif" />
+  </div>
+  <br> 
+  <div align = "middle">
+    <video src="Autumn.mpg" controls loop autoplay></video>
+  </div>
+  <br>  
+  <form align = "middle">
+    <input id="n1" />
+    <input id="n2" />
+    <input type="button" value="Submit" onclick="adder()" />
+  </form>
 </body>
 </html>

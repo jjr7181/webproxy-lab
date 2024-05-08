@@ -24,7 +24,7 @@ To run Tiny:
 	e.g., "tiny 8000".
    Point your browser at Tiny: 
 	static content: http://<host>:8000
-	dynamic content: http://<host>:8000/cgi-bin/adder?1&2
+	dynamic content: http://<host>:8000/   
 
 Files:
   tiny.tar		Archive of everything in this directory
